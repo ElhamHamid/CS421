@@ -1,6 +1,11 @@
 "use strict";
 /* eslint-disable */
 
+/**
+ * 
+ * @param {l} l is the linked list
+ * @returns(object) it returns an object at the middle of the list l
+ */
 
 function findMiddle(l){
     let p=l.first();
@@ -9,7 +14,7 @@ function findMiddle(l){
          p=l.after(p);
          q=l.before(q);
      }
-     return q.element();
+     return q;
 }
 
 let list1=new DLinkedList();

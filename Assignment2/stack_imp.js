@@ -24,10 +24,6 @@ class Stack {
     print(){
         this._stack.print();
     }
-    remove(){
-        this._stack.remove(first());
-    }
-
 }
 
 
@@ -41,7 +37,9 @@ myStack.print();
 console.log(myStack.size());
 
 myStack.pop();
+myStack.print();
 myStack.pop();
+myStack.print();
 myStack.pop();
 myStack.print();
 console.log(myStack.size());

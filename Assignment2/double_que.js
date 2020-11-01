@@ -16,12 +16,12 @@ class DoubleQueue {
         return this._queOut.pop();
         
     }
-    print(){
-        this._queIn.print();
-    }
-    front(){
-        return this._queOut.top()
-    }
+    size(){
+        this._queIn.size() +this._queOut.size();
+        }
+    isEmpty(){
+        return size()==0;
+    }    
    
 }
 
@@ -29,7 +29,7 @@ let testQue= new DoubleQueue();
 testQue.enqueue(1);
 testQue.enqueue(2);
 testQue.enqueue(3);
-testQue.print();
+testQue.size();
 
 testQue.dequeue();
-testQue.print();
+testQue.size();
