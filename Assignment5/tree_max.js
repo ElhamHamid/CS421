@@ -6,14 +6,13 @@ function Max(t){
 }
 
 function MaxHelper(t,p){
-    let max=p;
-
     if(t.isExternal(p)){
         return -Infinity;
     }
     else{
-        let left=sumHelper(t,t.leftChild(p));
-        let right=sumHelper(t,t.rightChild(p));
+        let max=p.element();
+        let left=MaxHelper(t,t.leftChild(p));
+        let right=MaxHelper(t,t.rightChild(p));
         return Math.max(max,left,right);
     }
 }

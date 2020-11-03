@@ -1,26 +1,28 @@
 "use strict";
 /* eslint-disable*/
 
-function sum(t){
-    return sumHelper(t,t.root());
+
+
+
+function findHeight(t){
+    return findHeightHelper(t,t.root());
 }
 
-function sumHelper(t,p){
+
+function findHeightHelper(t,p){
     if(t.isExternal(p)){
         return 0;
+    }else{
+       let x=findHeightHelper(t,t.leftChild(p));
+       let y=findHeightHelper(t,t.rightChild(p));
+       let h= Math.max(x,y);
+       return h + 1;
     }
-    else{
-        let sum=p.element();
-        let left=sumHelper(t,t.leftChild(p));
-        let right=sumHelper(t,t.rightChild(p));
-        return sum + left + right;
-    }
-
 }
 
-let t0 = new BinaryTree();
+var t0 = new BinaryTree();
 
-let printer = new Print();
+var printer = new Print();
 
 printer.print(t0);
 
@@ -44,5 +46,4 @@ printer.print(t0);
 t0.insertLeft(r1, 700);
 printer.print(t0);
 
-
-console.log(sum(t0));
+console.log(findHeight(t0));
