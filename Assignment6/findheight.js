@@ -13,9 +13,10 @@ function findHeightHelper(t,p){
     if(t.isExternal(p)){
         return 0;
     }else{
+        let h=0;
        let x=findHeightHelper(t,t.leftChild(p));
        let y=findHeightHelper(t,t.rightChild(p));
-       let h= Math.max(x,y);
+        h= Math.max(x,y);1
        return h + 1;
     }
 }
