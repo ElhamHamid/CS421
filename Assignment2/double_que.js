@@ -29,7 +29,7 @@ let testQue= new DoubleQueue();
 testQue.enqueue(1);
 testQue.enqueue(2);
 testQue.enqueue(3);
-testQue.size();
+console.log(testQue.size());
 
-testQue.dequeue();
-testQue.size();
+console.log(testQue.dequeue());
+console.log(testQue.size());

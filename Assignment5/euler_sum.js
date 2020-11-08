@@ -13,3 +13,21 @@ class Sum extends EulerTour{
         return this.eulerTour(t,t.root());
     }
 }
+
+
+
+let mytree = new BinaryTree();
+let myprinter = new Print();
+
+myprinter.print(mytree);
+
+let h = mytree.insertRoot(300);
+myprinter.print(mytree);
+
+let h1 = mytree.insertLeft(h, 200);
+let l = mytree.insertRight(h, 400);
+myprinter.print(mytree);
+
+let maysum=new Sum();
+
+console.log(maysum.sum(mytree));
