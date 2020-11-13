@@ -1,6 +1,5 @@
 "use strict";
 /* eslint-disable*/
-
 class CPos {
     constructor (key, elem, next) {
         // inserts this new node between prev and next
@@ -236,26 +235,4 @@ class HTIterator {
         }
     }
 }
-function genData(n, k) {
-    // n is the number of votes cast and k is the number of candidates
-    let dat = new Array(n);
-    for (let i=0; i<n; i++) {
-        let rand = Math.floor(Math.random()*10)%k + 1;
-        dat[i] = rand;
-    }
-    return dat;
-}
-function findWinners(dat) {
-    let D = new HT_Dictionary();
-// your code goes here
-    let iter = D.iterator();
-    let max = 0;
-    let winners = [];
-    while (iter.hasNext()) {
-// your code goes here
-    }
-    console.log(winners);
-}
-let dat = genData(100, 7);
-console.log(dat);
-findWinners(dat);
+
